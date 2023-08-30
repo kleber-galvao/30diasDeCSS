@@ -1,0 +1,68 @@
+body {
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main button {
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    padding: .5em;
+    border: 5px solid rgb(167, 0, 144);
+    position: relative;
+    cursor: pointer;
+}
+
+main button::before, main button::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 5px;
+    background: #f1f1f1;
+    transform: skewX(40deg);
+    transition: .3s linear;
+}
+
+main button::before {
+    top: -5px;
+    left: 1%;
+}
+
+main button:hover::before {
+    left: 88%;
+}
+
+main button::after {
+    bottom: -5px;
+    right: 1%;
+}
+
+main button:hover::after {
+    right: 88%;
+}
+
+footer {
+    height: 5vh;
+    background-color: #fff;
+    color: #525252;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid;
+}
